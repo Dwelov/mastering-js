@@ -1,0 +1,54 @@
+1. Productivity & Tools
+Google Keep Clone → Notes app with add, edit, delete, pin, and search.
+
+Trello Clone → Drag-and-drop task boards with lists and cards.
+
+Todoist Clone → Advanced to-do list with projects, priorities, and filters.
+
+Google Docs Lite → Collaborative text editor (start with local storage, then add WebSocket for real-time).
+
+Notion Clone (basic) → Pages with blocks (text, headings, checklists).
+
+2. Social & Communication
+WhatsApp Web Clone → Chat interface with message bubbles, emoji picker, and local storage.
+
+Twitter Clone → Post tweets, like, retweet, infinite scroll feed.
+
+Instagram Clone → Image upload, likes, comments, profile pages.
+
+Reddit Clone → Threaded discussions, upvotes/downvotes.
+
+Slack Clone → Channels, direct messages, WebSocket for real-time.
+
+3. Entertainment & Media
+Spotify Clone → Music player with playlists, progress bar, and volume control.
+
+YouTube Clone → Video player with play/pause, fullscreen, comments.
+
+Netflix Clone → Movie browsing grid with hover previews.
+
+SoundCloud Clone → Audio streaming with waveform visualization.
+
+Medium Clone → Blogging platform with editor + article feed.
+
+4. Shopping & Finance
+Amazon Clone → Product listing, cart, checkout flow.
+
+eBay Clone → Auction system with countdown timers.
+
+PayPal Clone (basic) → Send/receive money simulation with transaction history.
+
+Stripe Checkout Clone → Payment form with validation.
+
+Etsy Clone → Marketplace with product categories and seller profiles.
+
+5. Utilities & Fun
+Weather App (AccuWeather Clone) → Fetch live weather via API, show forecast.
+
+Google Maps Clone → Pan/zoom map with markers (using Canvas or Map API).
+
+Calculator App (Windows Calculator Clone) → Scientific calculator with history.
+
+Calendar App (Google Calendar Clone) → Monthly view, add/edit events.
+
+Chess.com  Clone (basic) → Play chess with drag-and-drop pieces.
