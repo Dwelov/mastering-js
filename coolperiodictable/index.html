@@ -1,31 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag and drop Periodic Table</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    
+
 </head>
+
 <body>
     <header>
         <h1>Drag and drop Periodic Table</h1>
     </header>
     <main>
-       <section class="periodic">
-        <div class="elements">
-            <div class="element" draggable="true" id="H">H</div>
-        </div>
-        <div class="periodic-table">
-            <div class="blocks"></div>
-        </div>
-       </section>
-       <section class ="f-block"></section>
+        <section class="periodic">
+            <div class="elements">
+                <!-- <div class="element" draggable="true">
+                    <div class="atomic-number"></div>
+                    <div class="symbol"></div>
+                    <div class="name"></div>
+                    <div class="mass"></div>
+                </div> -->
+
+            </div>
+            <div class="periodic-table"> <!-- Row 1 -->
+                <div class="block" style="grid-column: 1; grid-row: 1;">H</div>
+                <div class="block" style="grid-column: 18; grid-row: 1;">He</div> <!-- Row 2 -->
+                <div class="block lithium" style="grid-column: 1; grid-row: 2;"></div>
+                <div class="block" style="grid-column: 2; grid-row: 2;">Be</div>
+                <div class="block" style="grid-column: 13; grid-row: 2;">B</div>
+                <div class="block" style="grid-column: 14; grid-row: 2;">C</div>
+                <div class="block" style="grid-column: 15; grid-row: 2;">N</div>
+                <div class="block" style="grid-column: 16; grid-row: 2;">O</div>
+                <div class="block" style="grid-column: 17; grid-row: 2;">F</div>
+                <div class="block" style="grid-column: 18; grid-row: 2;">Ne</div> <!-- Row 3 -->
+                <div class="block" style="grid-column: 1; grid-row: 3;">Na</div>
+                <div class="block" style="grid-column: 2; grid-row: 3;">Mg</div>
+                <div class="block" style="grid-column: 13; grid-row: 3;">Al</div>
+                <div class="block" style="grid-column: 14; grid-row: 3;">Si</div>
+                <div class="block" style="grid-column: 15; grid-row: 3;">P</div>
+                <div class="block" style="grid-column: 16; grid-row: 3;">S</div>
+                <div class="block" style="grid-column: 17; grid-row: 3;">Cl</div>
+                <div class="block" style="grid-column: 18; grid-row: 3;">Ar</div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <div class="block" style="grid-row : 4"></div>
+                <!-- Row 5 (18 blocks) -->
+                <div class="block" style="grid-column: 1; grid-row: 5;">K</div>
+                <div class="block" style="grid-column: 2; grid-row: 5;">Ca</div>
+                <div class="block" style="grid-column: 3; grid-row: 5;">Sc</div>
+                <div class="block" style="grid-column: 4; grid-row: 5;">Ti</div>
+                <div class="block" style="grid-column: 5; grid-row: 5;">V</div>
+                <div class="block" style="grid-column: 6; grid-row: 5;">Cr</div>
+                <div class="block" style="grid-column: 7; grid-row: 5;">Mn</div>
+                <div class="block" style="grid-column: 8; grid-row: 5;">Fe</div>
+                <div class="block" style="grid-column: 9; grid-row: 5;">Co</div>
+                <div class="block" style="grid-column: 10; grid-row: 5;">Ni</div>
+                <div class="block" style="grid-column: 11; grid-row: 5;">Cu</div>
+                <div class="block" style="grid-column: 12; grid-row: 5;">Zn</div>
+                <div class="block" style="grid-column: 13; grid-row: 5;">Ga</div>
+                <div class="block" style="grid-column: 14; grid-row: 5;">Ge</div>
+                <div class="block" style="grid-column: 15; grid-row: 5;">As</div>
+                <div class="block" style="grid-column: 16; grid-row: 5;">Se</div>
+                <div class="block" style="grid-column: 17; grid-row: 5;">Br</div>
+                <div class="block" style="grid-column: 18; grid-row: 5;">Kr</div>
+                <!-- Row 6 -->
+                <div class="block" style="grid-column: 1; grid-row: 6;">Rb</div>
+                <div class="block" style="grid-column: 2; grid-row: 6;">Sr</div>
+                <div class="block" style="grid-column: 3; grid-row: 6;">Y</div>
+                <div class="block" style="grid-column: 4; grid-row: 6;">Zr</div>
+                <div class="block" style="grid-column: 5; grid-row: 6;">Nb</div>
+                <div class="block" style="grid-column: 6; grid-row: 6;">Mo</div>
+                <div class="block" style="grid-column: 7; grid-row: 6;">Tc</div>
+                <div class="block" style="grid-column: 8; grid-row: 6;">Ru</div>
+                <div class="block" style="grid-column: 9; grid-row: 6;">Rh</div>
+                <div class="block" style="grid-column: 10; grid-row: 6;">Pd</div>
+                <div class="block" style="grid-column: 11; grid-row: 6;">Ag</div>
+                <div class="block" style="grid-column: 12; grid-row: 6;">Cd</div>
+                <div class="block" style="grid-column: 13; grid-row: 6;">In</div>
+                <div class="block" style="grid-column: 14; grid-row: 6;">Sn</div>
+                <div class="block" style="grid-column: 15; grid-row: 6;">Sb</div>
+                <div class="block" style="grid-column: 16; grid-row: 6;">Te</div>
+                <div class="block" style="grid-column: 17; grid-row: 6;">I</div>
+                <div class="block" style="grid-column: 18; grid-row: 6;">Xe</div>
+
+            </div>
+        </section>
+        <section class="f-block"></section>
     </main>
     <footer>
         &copy; 2024 Drag and drop Periodic Table - All rights reserved.
     </footer>
-    
+
 </body>
+
 </html>
