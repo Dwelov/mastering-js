@@ -1,4 +1,5 @@
 const elementsContainer = document.querySelector('.elements');
+const dropZone = document.querySelectorAll("[id]");
 
 const elementsData = [
   { number: 1, symbol: "H", name: "Hydrogen", mass: "1.008" },
@@ -91,6 +92,8 @@ elementsData.forEach(el => {
   elementDiv.classList.add('element');
   elementDiv.setAttribute('draggable', 'true');
   elementDiv.dataset.symbol = el.symbol;
+  elementDiv.dataset.number = el.number;
+
 
   elementDiv.innerHTML = `
     <div class="atomic-number">${el.number}</div>
@@ -100,5 +103,25 @@ elementsData.forEach(el => {
   `;
 
   elementsContainer.appendChild(elementDiv);
+
+  elementDiv.addEventListener('dragstart', (e) => {
+    e.dataTransfer.setData('number', el.number);
+  });
+
+  dropZone.forEach(zone => {
+    zone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+    });
+
+    zone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      const number = e.dataTransfer.getData('number');
+      const draggedElement = document.querySelector(`.element[data-number='${number}']`);
+      if (draggedElement && zone.id === number.toString()) {
+        zone.appendChild(draggedElement);
+        zone.style.border = '#d4edda'; // Green background for correct placement
+      }
+    });
+  });
 });
 
