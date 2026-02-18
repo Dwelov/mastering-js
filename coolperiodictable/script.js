@@ -1,4 +1,5 @@
 const elementsContainer = document.querySelector('.elements');
+
 const elementsData = [
   { number: 1, symbol: "H", name: "Hydrogen", mass: "1.008" },
   { number: 2, symbol: "He", name: "Helium", mass: "4.0026" },
@@ -56,38 +57,48 @@ const elementsData = [
   { number: 54, symbol: "Xe", name: "Xenon", mass: "131.29" },
   { number: 55, symbol: "Cs", name: "Cesium", mass: "132.91" },
   { number: 56, symbol: "Ba", name: "Barium", mass: "137.33" },
-  { number: 57, symbol: "La", name: "Lanthanum", mass: "138.91" },
-  { number: 58, symbol: "Ce", name: "Cerium", mass: "140.12" },
-  { number: 59, symbol: "Pr", name: "Praseodymium", mass: "140.91" },
-  { number: 60, symbol: "Nd", name: "Neodymium", mass: "144.24" },
-  { number: 61, symbol: "Pm", name: "Promethium", mass: "[145]" },
-  { number: 62, symbol: "Sm", name: "Samarium", mass: "150.36" },
-  { number: 63, symbol: "Eu", name: "Europium", mass: "151.96" },
-  { number: 64, symbol: "Gd", name: "Gadolinium", mass: "157.25" },
-  { number: 65, symbol: "Tb", name: "Terbium", mass: "158.93" },
-  { number: 66, symbol: "Dy", name: "Dysprosium", mass: "162.50" },
-  { number: 67, symbol: "Ho", name: "Holmium", mass: "164.93" },
-  { number: 68, symbol: "Er", name: "Erbium", mass: "167.26" },
-  { number: 69, symbol: "Tm", name: "Thulium", mass: "168.93" },
-  { number: 70, symbol: "Yb", name: "Ytterbium", mass: "173.05" },
-  { number: 71, symbol: "Lu", name: "Lutetium", mass: "174.97" },
+  // Lanthanides
+  { number: "57", symbol: "*La", name: "Lanthanides", mass: "138.91" },
   { number: 72, symbol: "Hf", name: "Hafnium", mass: "178.49" },
   { number: 73, symbol: "Ta", name: "Tantalum", mass: "180.95" },
-  ];
+  { number: 74, symbol: "W", name: "Tungsten", mass: "183.84" },
+  { number: 75, symbol: "Re", name: "Rhenium", mass: "186.21" },
+  { number: 76, symbol: "Os", name: "Osmium", mass: "190.23" },
+  { number: 77, symbol: "Ir", name: "Iridium", mass: "192.22" },
+  { number: 78, symbol: "Pt", name: "Platinum", mass: "195.08" },
+  { number: 79, symbol: "Au", name: "Gold", mass: "196.97" },
+  { number: 80, symbol: "Hg", name: "Mercury", mass: "200.59" },
+  { number: 81, symbol: "Tl", name: "Thallium", mass: "204.38" },
+  { number: 82, symbol: "Pb", name: "Lead", mass: "207.2" },
+  { number: 83, symbol: "Bi", name: "Bismuth", mass: "208.98" },
+  { number: 84, symbol: "Po", name: "Polonium", mass: "[209]" },
+  { number: 85, symbol: "At", name: "Astatine", mass: "[210]" },
+  { number: 86, symbol: "Rn", name: "Radon", mass: "[222]" },
+  { number: 87, symbol: "Fr", name: "Francium", mass: "[223]" },
+  { number: 88, symbol: "Ra", name: "Radium", mass: "[226]" },
+  { number: 89, symbol: "Ac", name: "Actinium", mass: "227" },
+  { number: 104, symbol: "Rf", name: "Rutherfordium", mass: "[267]" },
+  { number: 105, symbol: "Db", name: "Dubnium", mass: "[270]" },
+  { number: 106, symbol: "Sg", name: "Seaborgium", mass: "[271]" },
+  { number: 107, symbol: "Bh", name: "Bohrium", mass: "[270]" },
+  { number: 108, symbol: "Hs", name: "Hassium", mass: "[277]" },
+  { number: 109, symbol: "Mt", name: "Meitnerium", mass: "[278]" },
+];
 
 
 elementsData.forEach(el => {
-    const elementDiv = document.createElement('div');
-    elementDiv.classList.add('element');
-    elementDiv.setAttribute('draggable', 'true');
-    elementDiv.dataset.symbol = el.symbol;
+  const elementDiv = document.createElement('div');
+  elementDiv.classList.add('element');
+  elementDiv.setAttribute('draggable', 'true');
+  elementDiv.dataset.symbol = el.symbol;
 
-    elementDiv.innerHTML = `
+  elementDiv.innerHTML = `
     <div class="atomic-number">${el.number}</div>
     <div class="symbol">${el.symbol}</div>
     <div class="name">${el.name}</div>
     <div class="mass">${el.mass}</div>
   `;
 
-    elementsContainer.appendChild(elementDiv);
+  elementsContainer.appendChild(elementDiv);
 });
+

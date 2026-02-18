@@ -25,7 +25,7 @@ main {
 /* Periodic section: side-by-side layout */
 .periodic {
     width: 98%;
-    height: 70%;
+    height: 80%;
     border: 1px solid black;
     display: flex;
     /* key fix: flexbox */
@@ -36,13 +36,13 @@ main {
 /* f-block section */
 .f-block {
     width: 98%;
-    height: 30%;
+    height: 20%;
     border: 1px solid black;
 }
 
 /* Elements list (left side) */
 .elements {
-    width: 30%;
+    width: 28%;
     border: 1px solid black;
     height: 100%;
     text-align: center;
