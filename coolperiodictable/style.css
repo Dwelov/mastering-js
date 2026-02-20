@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    overflow:hidden;
+}
+
 /* Header */
 header {
     width: 100%;
@@ -123,7 +127,7 @@ h4 {
 }
 
 .block {
-    border: px solid #ff9a9e;
+    border: 1px solid #ff9a9e;
     background-color: #f9f9f9;
     border-radius: 4px;
     display: flex;

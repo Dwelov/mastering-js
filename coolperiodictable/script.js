@@ -58,7 +58,7 @@ const elementsData = [
   { number: 54, symbol: "Xe", name: "Xenon", mass: "131.29" },
   { number: 55, symbol: "Cs", name: "Cesium", mass: "132.91" },
   { number: 56, symbol: "Ba", name: "Barium", mass: "137.33" },
-  { number: "57", symbol: "*La", name: "Lanthanides", mass: "138.91" },
+  { number: 57, symbol: "*La", name: "Lanthanides", mass: "138.91" },
   { number: 72, symbol: "Hf", name: "Hafnium", mass: "178.49" },
   { number: 73, symbol: "Ta", name: "Tantalum", mass: "180.95" },
   { number: 74, symbol: "W", name: "Tungsten", mass: "183.84" },
@@ -90,6 +90,7 @@ const elementsData = [
   { number: 61, symbol: "Pm", name: "Promethium", mass: "[145]" },
   { number: 62, symbol: "Sm", name: "Samarium", mass: "150.36" },
   { number: 63, symbol: "Eu", name: "Europium", mass: "151.96" },
+
   { number: 64, symbol: "Gd", name: "Gadolinium", mass: "157.25" },
   { number: 65, symbol: "Tb", name: "Terbium", mass: "158.93" },
   { number: 66, symbol: "Dy", name: "Dysprosium", mass: "162.50" },
@@ -149,14 +150,10 @@ elementsData.forEach(el => {
 
       if (draggedElement && zone.id === number.toString()) {
         const clone = draggedElement.cloneNode(true);
-
         clone.className = "element";
-
         clone.removeAttribute("style");
-
         zone.innerHTML = "";
         zone.appendChild(clone);
-
         zone.style.border = "none";
         draggedElement.style.display = "none";
       }
