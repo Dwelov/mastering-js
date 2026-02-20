@@ -146,11 +146,22 @@ elementsData.forEach(el => {
       e.preventDefault();
       const number = e.dataTransfer.getData('number');
       const draggedElement = document.querySelector(`.element[data-number='${number}']`);
+
       if (draggedElement && zone.id === number.toString()) {
-        zone.appendChild(draggedElement);
-        zone.style.border = '#d4edda'; // Green background for correct placement
+        const clone = draggedElement.cloneNode(true);
+
+        clone.className = "element";
+
+        clone.removeAttribute("style");
+
+        zone.innerHTML = "";
+        zone.appendChild(clone);
+
+        zone.style.border = "none";
+        draggedElement.style.display = "none";
       }
     });
+
   });
 });
 

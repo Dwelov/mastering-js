@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
 }
 
 /* Header */
@@ -33,12 +32,12 @@ main {
     gap: 10px;
 }
 
-h2{
-text-align:center;
+h2 {
+    text-align: center;
 }
 
-h4{
-    text-align:right;
+h4 {
+    text-align: right;
 }
 
 /* f-block section */
@@ -60,7 +59,6 @@ h4{
     overflow-x: hidden;
     background-color: rgb(197, 196, 196);
     justify-content: center;
-
 }
 
 .title {
@@ -85,7 +83,6 @@ h4{
     overflow: hidden;
 }
 
-/* Atomic number (top-left corner) */
 .atomic-number {
     position: absolute;
     top: 2px;
@@ -94,16 +91,13 @@ h4{
     font-weight: bold;
 }
 
-/* Symbol (centered, largest text) */
 .symbol {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     line-height: 50px;
-    /* vertically center */
 }
 
-/* Name and mass (optional, tiny text) */
 .name,
 .mass {
     position: absolute;
@@ -116,10 +110,8 @@ h4{
 
 .mass {
     bottom: 10px;
-    /* place mass above name */
 }
 
-/* Periodic table grid (right side) */
 .periodic-table {
     flex: 1;
     display: grid;
@@ -131,13 +123,15 @@ h4{
 }
 
 .block {
-    border: 1px solid #333;
-    text-align: center;
-    line-height: 50px;
+    border: px solid #ff9a9e;
     background-color: #f9f9f9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/*Styling for the F block section */
+
 .f-block {
     display: grid;
     gap: 3px;
