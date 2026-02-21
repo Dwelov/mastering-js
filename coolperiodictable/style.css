@@ -151,3 +151,36 @@ h4 {
 footer {
     text-align: center;
 }
+
+ .rotate-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000;
+      color: #fff;
+      font-size: 1.5em;
+      text-align: center;
+      padding-top: 40%;
+      z-index: 9999;
+    }
+
+    /* Show overlay when in portrait */
+    @media screen and (orientation: portrait) {
+      .rotate-overlay {
+        display: block;
+      }
+      .main-content {
+        display: none; /* hide your app in portrait */
+      }
+    }
+
+    /* Normal view in landscape */
+    @media screen and (orientation: landscape) {
+      .rotate-overlay {
+        display: none;
+      }
+      .main-content {
+        display: block;
+      }
+    }
