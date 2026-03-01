@@ -124,6 +124,7 @@ h4 {
     gap: 3px;
     background-color: #fafafa;
     padding: 10px;
+    width:70%;
 }
 
 .block {
@@ -154,10 +155,10 @@ footer {
 
 /*its time to optimize th app for the mobile devices*/
 
-@media screen and (max-width: 460px) and (orientation: landscape) {
+@media screen and (max-width: 1024px) and (orientation: landscape) {
   .elements{
     width:20vw;
-    padding:2px;
+    padding: 1px;
   }
 
 .element {
