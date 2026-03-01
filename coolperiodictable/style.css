@@ -155,7 +155,7 @@ footer {
 
 /*its time to optimize th app for the mobile devices*/
 
-@media screen and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 460px) and (orientation: landscape) {
   .elements{
     width:20vw;
     padding: 1px;
