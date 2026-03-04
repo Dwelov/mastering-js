@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: url(bg.png) no-repeat center center/cover;
+}
+
+h1 {
+  font-family: Oswald;
+  text-align: center;
+  font-size: 10rem;
+  color: rgba(0, 255, 255, 0.551);
+  opacity: 0.2;
+  text-shadow: 0 0 10px cyan;
+  left: 20%;
+  top: 30%;
+  position: fixed;
+  -webkit-text-stroke: 5px cyan;
+  animation: blink 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.clock-container {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-color: rgba(0, 255, 255, 0.102);
+  backdrop-filter: blur(10px);
+  border: 10px solid rgba(3, 246, 226, 0.5);
+  box-shadow: 0 0 20px rgb(3, 246, 226),
+    0 0 30px rgb(3, 246, 226),
+    0 0 50px rgb(3, 246, 226);
+  margin: 60px auto;
+  padding: 1rem;
+  animation: appear 3s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.outer-circle {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.159);
+  position: relative;
+}
+
+.fill {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: conic-gradient(cyan 0deg, transparent 0deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 17px),
+      black calc(100% - 17px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 17px), black calc(100% - 17px));
+
+}
+
+.inner-layer {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.345);
+  background: rgba(0, 0, 0, 0.107);
+  z-index: 2;
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: cyan;
+}
+
+#ampm {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.583);
+}
+
+span {
+  text-shadow: 0 0 5px cyan;
+}

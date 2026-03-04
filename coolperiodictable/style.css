@@ -15,8 +15,10 @@ header {
     height: 10vh;
     background-color: black;
     color: white;
-    text-align: center;
     padding: 10px;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
 }
 
 /* Main layout */
