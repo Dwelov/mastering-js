@@ -2,6 +2,8 @@ const elementsContainer = document.querySelector('.elements');
 const dropZone = document.querySelectorAll("[id]");
 const scoreContainer = document.querySelector(".score");
 let score = 0;
+const increment = 1 / 108;
+
 
 const elementsData = [
   { number: 1, symbol: "H", name: "Hydrogen", mass: "1.008" },
@@ -120,7 +122,7 @@ const elementsData = [
 
 
 const displayResult = () => {
-  scoreContainer.textContent = score;
+  scoreContainer.textContent = Math.floor(score);
 }
 elementsData.forEach(el => {
   const elementDiv = document.createElement('div');
@@ -161,7 +163,8 @@ elementsData.forEach(el => {
         zone.appendChild(clone);
         zone.style.border = "none";
         draggedElement.style.display = "none";
-        score=score+1;
+
+        score += increment;
         displayResult();
       }
     });
